@@ -1,0 +1,61 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/layout_add_repo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/card_background"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_owner_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Owner"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/et_owner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_owner_label"
+            android:inputType="text"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tv_repo_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_owner"
+            android:layout_marginTop="16dp"
+            android:text="Repository Name"
+            android:textSize="16sp"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:id="@+id/et_repo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_repo_label"
+            android:inputType="text"
+            android:textColor="@color/white"/>
+
+
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_repo"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="24dp"
+            android:text="Add" />
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GitHub  Fav Repo</string>
+    <string name="empty_label_text">Track your favourite repos!</string>
+    <string name="no_repos_label">"Track your favourite repo "</string>
+    <string name="add_now">ADD NOW</string>
+    <string name="add_repo">ADD REPO</string>
+    <string name="share">share</string>
+</resources>
