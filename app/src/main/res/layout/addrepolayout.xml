@@ -1,20 +1,47 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:background="@drawable/toolbar_background"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:title="Add New Repository">
+    </androidx.appcompat.widget.Toolbar>
 
     <RelativeLayout
         android:id="@+id/layout_add_repo"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="500dp"
         android:layout_gravity="center"
         android:background="@drawable/card_background"
         android:padding="16dp">
+        <ImageView
+            android:id="@+id/image_banner"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/my_image"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"/>
+        <TextView
+            android:id="@+id/banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:layout_below="@+id/image_banner"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"/>
 
         <TextView
             android:id="@+id/tv_owner_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/banner"
             android:text="Owner"
             android:textColor="@color/white"
             android:textSize="16sp" />
@@ -25,7 +52,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_owner_label"
             android:inputType="text"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"
+            android:background="@drawable/rounded_edittext"/>
 
         <TextView
             android:id="@+id/tv_repo_label"
@@ -43,7 +71,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/tv_repo_label"
             android:inputType="text"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"
+            android:background="@drawable/rounded_edittext"/>
 
 
 

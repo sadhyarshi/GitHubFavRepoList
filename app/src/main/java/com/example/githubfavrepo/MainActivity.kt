@@ -42,13 +42,14 @@ class MainActivity : AppCompatActivity() {
         btn.setOnClickListener{
             val intent = Intent(this, AddRepo::class.java)
             startActivity(intent)
+            finish()
         }
         //code for empty button and textBox
         val btnAddNow = findViewById<Button>(R.id.btn_add_now)
         btnAddNow.setOnClickListener {
             val intent = Intent(this, AddRepo::class.java)
             startActivity(intent)
-
+            finish()
         }
 
     }

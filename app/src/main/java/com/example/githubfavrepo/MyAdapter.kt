@@ -36,7 +36,7 @@ class MyAdapter : RecyclerView.Adapter<MyAdapter.ViewHolder>() {
             val description = item.second.second
             val link = item.second.third
             val owner = item.second.fourth
-            val shareText = "Repo name: $name\n\n Description:$description\n\nUrl:$link\n\nOwner name:$owner"
+            val shareText = " Check out this git repository Repo name: $name\n\n Description:$description\n\nUrl:$link\n\nOwner name:$owner"
             val intent = Intent(Intent.ACTION_SEND).apply {
                 type = "text/plain"
                 putExtra(Intent.EXTRA_TEXT, shareText)

@@ -18,6 +18,7 @@ class AddRepo : AppCompatActivity() {
         setContentView(R.layout.addrepolayout)
         val actionBar: ActionBar? = supportActionBar
          supportActionBar?.title = "Add Repository"
+        actionBar?.setDisplayHomeAsUpEnabled(true)
        // gitHubRepository = GitHubRepository(this)
         val addButton = findViewById<Button>(R.id.btn_add)
         val ownerEditText = findViewById<EditText>(R.id.et_owner)
@@ -48,5 +49,18 @@ class AddRepo : AppCompatActivity() {
 
 
         }
+
     }
+    override fun onSupportNavigateUp(): Boolean {
+        // This method is called when the back button is pressed.
+        // Navigate back to the MainActivity
+        onBackPressed()
+        return true
+    }
+
+    override fun onBackPressed() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finish()
+}
 }

@@ -72,6 +72,8 @@ class MyDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NA
         return dataList
     }
 
+
+       // delete function to delete may be further required if user wants to remove one of repo or all from the list
     fun deleteData(id: Long): Int {
         val db = writableDatabase
         val selection = "$COLUMN_ID = ?"
@@ -79,17 +81,8 @@ class MyDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NA
         return db.delete(TABLE_NAME, selection, selectionArgs)
     }
 
-    // add a new method to insert data with link and ownername columns
-    fun insertData(name: String, description: String, link: String, ownername: String): Long {
-        val db = writableDatabase
-        val values = ContentValues().apply {
-            put(COLUMN_NAME, name)
-            put(COLUMN_DESCRIPTION, description)
-            put(COLUMN_LINK, link)
-            put(COLUMN_OWNER_NAME, ownername)
-        }
-        return db.insert(TABLE_NAME, null, values)
-    }
+
+
 }
 
 data class Quadruple<A, B, C, D>(val first: A, val second: B, val third: C, val fourth: D)
